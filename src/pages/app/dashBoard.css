@@ -1,0 +1,55 @@
+.app {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #333;
+    color: white;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+  }
+  
+  .menu-open .sidebar {
+    transform: translateX(0);
+  }
+  
+  header {
+    background-color: #444;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .menu-btn span {
+    background-color: white;
+    display: block;
+    height: 2px;
+    margin: 5px 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-open .menu-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .menu-open .menu-btn span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-open .menu-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+  }
+  
